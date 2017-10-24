@@ -1,0 +1,10 @@
+FROM bijojoy/mydocker:mvn_3.5.0-1.0
+
+ENV clean clean
+ENV goal package
+
+VOLUME "/home"
+
+WORKDIR /home
+
+CMD ["sh", "-c", "mvn $clean $goal"]
